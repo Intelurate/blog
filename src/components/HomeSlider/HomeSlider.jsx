@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import HomeCarouselItem from '../HomeCarouselItem/HomeCarouselItem';
+
 import Slider1 from '../../assets/images/post/slider1.jpg';
 import Slider3 from '../../assets/images/post/slider3.jpg';
 import Slider4 from '../../assets/images/post/slider4.jpg';
@@ -12,22 +14,10 @@ export default class HomeSlider extends Component {
             <div className="tr-home-slider slider-style-two">
                 <div id="home-carousel" className="carousel slide" data-ride="carousel">
                     <ol className="carousel-indicators">
-                        <li data-target="#home-carousel" data-slide-to="0" className="active">
-                            <span className="catagory">World</span>
-                            <span className="indicators-title">U.S. marshal killed serving warrant at mobile</span>
-                        </li>
-                        <li data-target="#home-carousel" data-slide-to="1">
-                            <span className="catagory">Technology</span>
-                            <span className="indicators-title">Chelsea Handler slams Angelina yet again</span>
-                        </li>
-                        <li data-target="#home-carousel" data-slide-to="2">
-                            <span className="catagory">Business</span>
-                            <span className="indicators-title">Mirum est notare quam littera gothica</span>
-                        </li>
-                        <li data-target="#home-carousel" data-slide-to="3">
-                            <span className="catagory">Politics</span>
-                            <span className="indicators-title">Duis autem vel eum iriure dolor in hendrerit in</span>
-                        </li>
+                        <HomeCarouselItem title="World" description="U.S. marshal killed serving warrant at mobile" data="0"/>
+                        <HomeCarouselItem title="Technology" description="Chelsea Handler slams Angelina yet again" data="1"/>
+                        <HomeCarouselItem title="Business" description="Mirum est notare quam littera gothica" data="2"/>
+                        <HomeCarouselItem title="Politics" description="Duis autem vel eum iriure dolor in hendrerit in" data="3"/>
                     </ol>
 
                     <div className="carousel-inner" role="listbox">
