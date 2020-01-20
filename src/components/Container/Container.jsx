@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
+import cx from 'classnames';
 
 export default class Container extends Component {
     render() {
-        const { theme, title, link, children } = this.props;
+        const { theme, title, link, classContainer, children } = this.props;
         return (
-            <div className="tr-section">
+            <div className={cx("tr-section", classContainer)}>
                 {theme &&
                     <div className="section-title title-before">
                         <h1><Link to={link}>{title}</Link></h1>

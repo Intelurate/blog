@@ -35,7 +35,7 @@ export default class Header extends Component {
                                 </div>
                                 <div className="dropdown user-dropdown">
                                     Hello,
-                                    <Link to="#" aria-expanded="true">Jhon Player<i className="fa fa-caret-down"
+                                    <Link to="#" aria-expanded="true"> Jhon Player<i className="fa fa-caret-down"
                                                                                    aria-hidden="true"></i></Link>
                                     <ul className="sub-menu text-left">
                                         <li><Link to="#">My Profile</Link></li>

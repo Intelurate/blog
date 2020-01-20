@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 import CarouselIndicatorItem from './CarouselIndicatorItem/CarouselIndicatorItem';
 import CarouselInnerItem from './CarouselInnerItem/CarouselInnerItem';
