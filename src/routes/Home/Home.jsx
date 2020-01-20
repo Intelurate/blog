@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import {Link} from "react-router-dom";
 
 import Navbar from '../../components/Navbar/Navbar';
 import HomeSlider from '../../components/HomeSlider/HomeSlider';
 import Test from '../../components/Test/Test';
+import Container from "../../components/Container/Container";
 import ImageContainer from "../../components/ImageContainer/ImageContainer";
 import Post16 from '../../assets/images/post/16.jpg';
 import Author1 from '../../assets/images/others/author1.png';
@@ -10,8 +12,7 @@ import Post18 from '../../assets/images/post/18.jpg';
 import Author3 from '../../assets/images/others/author3.png';
 import Image1 from '../../assets/images/advertise/1.jpg';
 import Image3 from '../../assets/images/advertise/3.jpg';
-import {Link} from "react-router-dom";
-import Container from "../../components/Container/Container";
+import Image5 from '../../assets/images/advertise/5.jpg';
 
 export default class Home extends Component {
     render() {
@@ -61,6 +62,7 @@ export default class Home extends Component {
                         </div>
                     </div>
                 </div>
+                <ImageContainer link="#" src={Image5} alt="Image" classContainer="tr-ad ad-image text-center"/>
             </div>
         );
     }

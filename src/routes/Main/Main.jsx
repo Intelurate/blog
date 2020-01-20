@@ -11,9 +11,9 @@ export default class Main extends Component {
                     <div className="container-fluid">
                         <Header />
                         <Router />
-                        <Footer />
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }
