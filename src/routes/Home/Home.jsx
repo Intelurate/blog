@@ -61,6 +61,7 @@ export default class Home extends Component {
                             </Container>
                         </div>
                     </div>
+
                 </div>
                 <ImageContainer link="#" src={Image5} alt="Image" classContainer="tr-ad ad-image text-center"/>
             </div>
