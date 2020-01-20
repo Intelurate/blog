@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
+import _ from 'lodash';
 
 import Navbar from '../../components/Navbar/Navbar';
 import HomeSlider from '../../components/HomeSlider/HomeSlider';
@@ -14,8 +15,23 @@ import Image1 from '../../assets/images/advertise/1.jpg';
 import Image3 from '../../assets/images/advertise/3.jpg';
 import Image5 from '../../assets/images/advertise/5.jpg';
 
+import data from '../../data/home';
+
 export default class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            rising: null
+        };
+    }
+
+    componentDidMount() {
+        this.setState({rising: data.rising});
+    }
+
     render() {
+        let { rising } = this.state;
+        console.log(rising);
         return (
             <div>
                 <Navbar />
@@ -61,7 +77,31 @@ export default class Home extends Component {
                             </Container>
                         </div>
                     </div>
-
+                    <div className="col-sm-3 tr-sidebar tr-sticky">
+                        <div className="theiaStickySidebar">
+                            <Container kind="widget" title="This Is rising">
+                                <ul className="medium-post-list">
+                                    {rising && _.map(rising, (item, index) => (
+                                        <li className="tr-post" key={index}>
+                                            <div className="entry-header">
+                                                <div className="entry-thumbnail">
+                                                    <a href={item.detailsPost}><img className="img-responsive" src="../../assets/images/post/12.jpg" alt="Image"/></a>
+                                                </div>
+                                            </div>
+                                            <div className="post-content">
+                                                <div className="catagory">
+                                                    <a href={item.detailsTheme}>{item.theme}</a>
+                                                </div>
+                                                <h2 className="entry-title">
+                                                    <a href={item.detailsPost}>{item.title}</a>
+                                                </h2>
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </Container>
+                        </div>
+                    </div>
                 </div>
                 <ImageContainer link="#" src={Image5} alt="Image" classContainer="tr-ad ad-image text-center"/>
             </div>

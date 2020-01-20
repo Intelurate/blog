@@ -9,7 +9,7 @@ export default class Test extends Component {
     render() {
         const { titleTheme, linkTheme, img, imgAuthor, author, share, time, detailsPost, titlePost, descriptionPost } = this.props;
         return (
-            <Container theme title={titleTheme} link={linkTheme}>
+            <Container kind="theme" title={titleTheme} link={linkTheme}>
                 <div className="tr-post">
                     <div className="entry-header">
                         <div className="entry-thumbnail">

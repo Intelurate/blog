@@ -1,5 +1,5 @@
 module.exports = {
-  top: [
+    top: [
       {
           theme: "World",
           title: "U.S. marshal killed serving warrant at mobile",
@@ -36,7 +36,35 @@ module.exports = {
           time: "7 Hour ago",
           description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat."
       },
-  ]
-
+  ],
+    rising: [
+        {
+            img: "images/post/9.jpg",
+            theme: "Entertainment",
+            title: "Howard Stern: 'I told Trump' I'm voting for Clinton",
+            detailsPost: "details1.html",
+            detailsTheme: "#"
+        },
+        {
+            img: "images/post/10.jpg",
+            theme: "Business",
+            title: "Our closest relatives aren't fans of daylight saving time",
+            detailsPost: "details1.html",
+            detailsTheme: "#"},
+        {
+            img: "images/post/11.jpg",
+            theme: "Technology",
+            title: "And the most streamed Beatles song on Spotify is...",
+            detailsPost: "details1.html",
+            detailsTheme: "#"
+        },
+        {
+            img: "images/post/12.jpg",
+            theme: "Sports",
+            title: "Our closest relatives aren't fans of daylight saving time",
+            detailsPost: "details1.html",
+            detailsTheme: "#"
+        }
+    ]
 
 };
