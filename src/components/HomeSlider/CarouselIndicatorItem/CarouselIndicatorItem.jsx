@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class HomeCarouselItem extends Component {
+export default class CarouselIndicatorItem extends Component {
     render() {
         let { title, description, data } = this.props;
         return (

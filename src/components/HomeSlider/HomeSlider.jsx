@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import HomeCarouselItem from '../HomeCarouselItem/HomeCarouselItem';
+import CarouselIndicatorItem from './CarouselIndicatorItem/CarouselIndicatorItem';
+import CarouselInnerItem from './CarouselInnerItem/CarouselInnerItem';
 
 import Slider1 from '../../assets/images/post/slider1.jpg';
 import Slider3 from '../../assets/images/post/slider3.jpg';
@@ -14,156 +15,54 @@ export default class HomeSlider extends Component {
             <div className="tr-home-slider slider-style-two">
                 <div id="home-carousel" className="carousel slide" data-ride="carousel">
                     <ol className="carousel-indicators">
-                        <HomeCarouselItem title="World" description="U.S. marshal killed serving warrant at mobile" data="0"/>
-                        <HomeCarouselItem title="Technology" description="Chelsea Handler slams Angelina yet again" data="1"/>
-                        <HomeCarouselItem title="Business" description="Mirum est notare quam littera gothica" data="2"/>
-                        <HomeCarouselItem title="Politics" description="Duis autem vel eum iriure dolor in hendrerit in" data="3"/>
+                        <CarouselIndicatorItem title="World" description="U.S. marshal killed serving warrant at mobile" data="0"/>
+                        <CarouselIndicatorItem title="Technology" description="Chelsea Handler slams Angelina yet again" data="1"/>
+                        <CarouselIndicatorItem title="Business" description="Mirum est notare quam littera gothica" data="2"/>
+                        <CarouselIndicatorItem title="Politics" description="Duis autem vel eum iriure dolor in hendrerit in" data="3"/>
                     </ol>
 
                     <div className="carousel-inner" role="listbox">
-                        <div className="item active">
-                            <div className="item-content">
-                                <div className="item-image-content" data-animation="animated slideInLeft">
-                                    <div className="item-image" style={{ backgroundImage: `url(${Slider3})` }}>
-                                    </div>
-                                </div>
-                                <div className="post-content"  data-animation="animated fadeInDown">
-                                    <span className="catagory" data-animation="animated fadeInDown"><Link to="#">World</Link></span>
-                                    <h2 className="entry-title" data-animation="animated fadeInDwn">
-                                        <Link to="details1.html">U.S. marshal killed serving warrant at mobile</Link>
-                                    </h2>
-                                    <div className="entry-meta" data-animation="animated fadeInDwn">
-                                        <ul>
-                                            <li>By <Link to="#">Adam Hianks</Link></li>
-                                            <li>643 Share /<Link to="#"> 9 Hour ago</Link></li>
-                                        </ul>
-                                    </div>
-                                    <p data-animation="animated fadeInUp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat.</p>
-                                    <div className="read-more" data-animation="animated fadeInUp">
-                                        <div className="continue-reading pull-left">
-                                            <Link to="#">Continue Reading <i className="fa fa-angle-right"></i></Link>
-                                        </div>
-                                        <div className="feed pull-right">
-                                            <ul>
-                                                <li>Share</li>
-                                                <li><Link to="#"><i className="fa fa-facebook" aria-hidden="true"></i></Link></li>
-                                                <li><Link to="#"><i className="fa fa-twitter" aria-hidden="true"></i></Link></li>
-                                                <li><Link to="#"><i className="fa fa-google-plus" aria-hidden="true"></i></Link></li>
-                                                <li><Link to="#"><i className="fa fa-rss" aria-hidden="true"></i></Link></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <CarouselInnerItem
+                            active
+                            bgImage={Slider3}
+                            category="World"
+                            title="U.S. marshal killed serving warrant at mobile"
+                            author="Adam Hianks"
+                            share="643"
+                            time="9 Hour ago"
+                            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat."
+                        />
 
-                        <div className="item">
-                            <div className="item-content">
-                                <div className="item-image-content" data-animation="animated slideInLeft">
-                                    <div className="item-image" style={{ backgroundImage: `url(${Slider4})`}}>
-                                    </div>
-                                </div>
-                                <div className="post-content" data-animation="animated fadeInDown">
-                                    <span className="catagory" data-animation="animated fadeInDown"><Link to="#">Technology</Link></span>
-                                    <h2 className="entry-title" data-animation="animated fadeInDown">
-                                        <Link to="details1.html">Chelsea Handler slams Angelina yet again</Link>
-                                    </h2>
-                                    <div className="entry-meta"  data-animation="animated fadeInDown">
-                                        <ul>
-                                            <li>By <Link to="#">Matt Cloey</Link></li>
-                                            <li>218 Share /<Link to="#"> 5 Hour ago</Link></li>
-                                        </ul>
-                                    </div>
-                                    <p data-animation="animated fadeInUp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat.</p>
-                                    <div className="read-more" data-animation="animated fadeInUp">
-                                        <div className="continue-reading pull-left">
-                                            <Link to="#">Continue Reading <i className="fa fa-angle-right"></i></Link>
-                                        </div>
-                                        <div className="feed pull-right">
-                                            <ul>
-                                                <li>Share</li>
-                                                <li><Link to="#"><i className="fa fa-facebook" aria-hidden="true"></i></Link></li>
-                                                <li><Link to="#"><i className="fa fa-twitter" aria-hidden="true"></i></Link></li>
-                                                <li><Link to="#"><i className="fa fa-google-plus" aria-hidden="true"></i></Link></li>
-                                                <li><Link to="#"><i className="fa fa-rss" aria-hidden="true"></i></Link></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <CarouselInnerItem
+                            bgImage={Slider4}
+                            category="Technology"
+                            title="Chelsea Handler slams Angelina yet again"
+                            author="Matt Cloey"
+                            share="218"
+                            time="5 Hour ago"
+                            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat."
+                        />
 
-                        <div className="item">
-                            <div className="item-content">
-                                <div className="item-image-content" data-animation="animated slideInLeft">
-                                    <div className="item-image" style={{ backgroundImage: `url(${Slider5})`}}>
-                                    </div>
-                                </div>
-                                <div className="post-content" data-animation="animated fadeInDown">
-                                    <span className="catagory" data-animation="animated fadeInDown"><Link to="#">Business</Link></span>
-                                    <h2 className="entry-title" data-animation="animated fadeInDown">
-                                        <Link to="details1.html">Mirum est notare quam littera gothica</Link>
-                                    </h2>
-                                    <div className="entry-meta"  data-animation="animated fadeInDown">
-                                        <ul>
-                                            <li>By <Link to="#">Jhon Dun</Link></li>
-                                            <li>512 Share /<Link to="#"> 3 Hour ago</Link></li>
-                                        </ul>
-                                    </div>
-                                    <p data-animation="animated fadeInUp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat.</p>
-                                    <div className="read-more" data-animation="animated fadeInUp">
-                                        <div className="continue-reading pull-left">
-                                            <Link to="#">Continue Reading <i className="fa fa-angle-right"></i></Link>
-                                        </div>
-                                        <div className="feed pull-right">
-                                            <ul>
-                                                <li>Share</li>
-                                                <li><Link to="#"><i className="fa fa-facebook" aria-hidden="true"></i></Link></li>
-                                                <li><Link to="#"><i className="fa fa-twitter" aria-hidden="true"></i></Link></li>
-                                                <li><Link to="#"><i className="fa fa-google-plus" aria-hidden="true"></i></Link></li>
-                                                <li><Link to="#"><i className="fa fa-rss" aria-hidden="true"></i></Link></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <CarouselInnerItem
+                            bgImage={Slider5}
+                            category="Business"
+                            title="Mirum est notare quam littera gothica"
+                            author="Jhon Dun"
+                            share="512"
+                            time="3 Hour ago"
+                            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat."
+                        />
 
-                        <div className="item">
-                            <div className="item-content">
-                                <div className="item-image-content" data-animation="animated slideInLeft">
-                                    <div className="item-image" style={{ backgroundImage: `url(${Slider1})`}}>
-                                    </div>
-                                </div>
-                                <div className="post-content" data-animation="animated fadeInDown">
-                                    <span className="catagory" data-animation="animated fadeInDown"><Link to="#">Politics</Link></span>
-                                    <h2 className="entry-title" data-animation="animated fadeInDown">
-                                        <Link to="details1.html">Duis autem vel eum iriure dolor in hendrerit in</Link>
-                                    </h2>
-                                    <div className="entry-meta"  data-animation="animated fadeInDown">
-                                        <ul>
-                                            <li>By <Link to="#">Kolony Wispe</Link></li>
-                                            <li>610 Share /<Link to="#"> 7 Hour ago</Link></li>
-                                        </ul>
-                                    </div>
-                                    <p data-animation="animated fadeInUp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat.</p>
-                                    <div className="read-more" data-animation="animated fadeInUp">
-                                        <div className="continue-reading pull-left">
-                                            <Link to="#">Continue Reading <i className="fa fa-angle-right"></i></Link>
-                                        </div>
-                                        <div className="feed pull-right">
-                                            <ul>
-                                                <li>Share</li>
-                                                <li><Link to="#"><i className="fa fa-facebook" aria-hidden="true"></i></Link></li>
-                                                <li><Link to="#"><i className="fa fa-twitter" aria-hidden="true"></i></Link></li>
-                                                <li><Link to="#"><i className="fa fa-google-plus" aria-hidden="true"></i></Link></li>
-                                                <li><Link to="#"><i className="fa fa-rss" aria-hidden="true"></i></Link></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <CarouselInnerItem
+                            bgImage={Slider1}
+                            category="Politics"
+                            title="Duis autem vel eum iriure dolor in hendrerit in"
+                            author="Kolony Wispe"
+                            share="610"
+                            time="7 Hour ago"
+                            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat."
+                        />
+
                     </div>
                 </div>
             </div>
