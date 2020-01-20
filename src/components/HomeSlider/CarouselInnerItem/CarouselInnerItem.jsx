@@ -5,7 +5,6 @@ import cx from "classnames";
 export default class CarouselInnerItem extends Component {
     render() {
         let { active, bgImage, category, title, author, time, share, description } = this.props;
-        console.log(bgImage);
         return (
             <div className={cx("item", active && "active")}>
                 <div className={cx("item-content")}>
