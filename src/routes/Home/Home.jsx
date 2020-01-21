@@ -40,6 +40,7 @@ import data from '../../data/home';
 import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
 import PostSmall from "../../components/Post/Small/PostSmall";
 import LocalEvents from "../../components/LocalEvents/LocalEvents";
+import Sport from "../../components/Sport/Sport";
 
 class Home extends Component {
     constructor(props) {
@@ -142,6 +143,10 @@ class Home extends Component {
 
                     <div className="col-sm-4 col-md-3 medium-PostColumn-responsive tr-sticky">
                         <div className="theiaStickySidebar">
+                            <Container kind="theme" title="Sports" link="/">
+                                <Sport />
+                            </Container>
+
                             <Container classContainer="tr-ad ad-before">
                                 <ImageContainer link="#" src={Image3} alt="Image" />
                             </Container>
