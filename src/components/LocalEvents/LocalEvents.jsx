@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import Post from '../../assets/images/post/3.jpg';
 import Image2 from "../../assets/images/advertise/2.jpg";
 import ImageContainer from "../ImageContainer";
 
@@ -19,7 +18,7 @@ export default class LocalEvents extends Component {
                         <div className="tr-post">
                             <div className="entry-header">
                                 <div className="entry-thumbnail">
-                                    <ImageContainer link="details1.html" src={Post} alt="Image" />
+                                    <ImageContainer link="details1.html" src={Image2} alt="Image" />
                                 </div>
                             </div>
                             <div className="post-content">
@@ -41,7 +40,7 @@ export default class LocalEvents extends Component {
                         <div className="tr-post">
                             <div className="entry-header">
                                 <div className="entry-thumbnail">
-                                    <ImageContainer link="details1.html" src={Post} alt="Image" />
+                                    <ImageContainer link="details1.html" src={Image2} alt="Image" />
                                 </div>
                             </div>
                             <div className="post-content">
@@ -63,7 +62,7 @@ export default class LocalEvents extends Component {
                         <div className="tr-post">
                             <div className="entry-header">
                                 <div className="entry-thumbnail">
-                                    <ImageContainer link="details1.html" src={Post} alt="Image" />
+                                    <ImageContainer link="details1.html" src={Image2} alt="Image" />
                                 </div>
                             </div>
                             <div className="post-content">
