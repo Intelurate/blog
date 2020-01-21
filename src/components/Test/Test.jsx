@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
-import Container from '../Container/Container'
-import ImageContainer from "../ImageContainer/ImageContainer";
+import Container from '../Container'
+import ImageContainer from "../ImageContainer";
 import Socials from "../Socials/Socials";
 
 export default class Test extends Component {

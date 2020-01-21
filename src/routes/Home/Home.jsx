@@ -2,11 +2,21 @@ import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 import _ from 'lodash';
 
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+
+import MostVisited from '../../components/MostVisited';
+
+import {
+	loadPagesAsync
+} from '../../actions/pageActions';
+
 import Navbar from '../../components/Navbar/Navbar';
 import HomeSlider from '../../components/HomeSlider/HomeSlider';
 import Test from '../../components/Test/Test';
-import Container from "../../components/Container/Container";
-import ImageContainer from "../../components/ImageContainer/ImageContainer";
+import Container from "../../components/Container";
+import ImageContainer from "../../components/ImageContainer";
 import Post16 from '../../assets/images/post/16.jpg';
 import Author1 from '../../assets/images/others/author1.png';
 import Post18 from '../../assets/images/post/18.jpg';
@@ -17,7 +27,8 @@ import Image5 from '../../assets/images/advertise/5.jpg';
 
 import data from '../../data/home';
 
-export default class Home extends Component {
+
+class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -70,6 +81,7 @@ export default class Home extends Component {
 
                         </div>
                     </div>
+
                     <div className="col-sm-4 col-md-3 medium-post-responsive tr-sticky">
                         <div className="theiaStickySidebar">
                             <Container classContainer="tr-ad ad-before">
@@ -77,34 +89,38 @@ export default class Home extends Component {
                             </Container>
                         </div>
                     </div>
+
                     <div className="col-sm-3 tr-sidebar tr-sticky">
                         <div className="theiaStickySidebar">
-                            <Container kind="widget" title="This Is rising">
-                                <ul className="medium-post-list">
-                                    {rising && _.map(rising, (item, index) => (
-                                        <li className="tr-post" key={index}>
-                                            <div className="entry-header">
-                                                <div className="entry-thumbnail">
-                                                    <a href={item.detailsPost}><img className="img-responsive" src="../../assets/images/post/12.jpg" alt="Image"/></a>
-                                                </div>
-                                            </div>
-                                            <div className="post-content">
-                                                <div className="catagory">
-                                                    <a href={item.detailsTheme}>{item.theme}</a>
-                                                </div>
-                                                <h2 className="entry-title">
-                                                    <a href={item.detailsPost}>{item.title}</a>
-                                                </h2>
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </Container>
+                            <MostVisited {...this.props} />
                         </div>
                     </div>
+                    
                 </div>
                 <ImageContainer link="#" src={Image5} alt="Image" classContainer="tr-ad ad-image text-center"/>
             </div>
         );
     }
 }
+
+
+
+const mapStateToProps = (state) =>{
+    return {
+        mostVisitedPages: state.pages.get('mostVisitedPages')
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        actions: bindActionCreators({
+            loadPagesAsync,
+        }, 
+        dispatch)
+    }
+}
+
+
+Home = connect(mapStateToProps, mapDispatchToProps)(Home)
+
+export default Home;

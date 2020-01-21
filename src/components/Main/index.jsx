@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-export default class Main extends React.Component {
+
+import MostVisited from '../MostVisited';
+import {
+	loadPagesAsync
+} from '../actions/pageActions';
+
+
+class Main extends React.Component {
     render() {
         return (
             <div className="main-wrapper tr-page-top">
@@ -669,78 +678,15 @@ export default class Main extends React.Component {
 					</div>
 
 					<div className="col-sm-3 tr-sidebar tr-sticky">
+
+
+
 						<div className="theiaStickySidebar">
 							<div className="tr-section tr-ad ad-before">
 								<a href="#"><img className="img-responsive" src="images/advertise/2.jpg" alt="Image"/></a>
 							</div>
 
-							<div className="tr-section tr-widget">
-								<div className="widget-title title-before">
-									<span>This Is rising</span>
-								</div>
-								<ul className="medium-post-list">
-									<li className="tr-post">
-										<div className="entry-header">
-											<div className="entry-thumbnail">
-												<a href="details1.html"><img className="img-responsive" src="images/post/9.jpg" alt="Image"/></a>
-											</div>
-										</div>
-										<div className="post-content">
-											<div className="catagory">
-												<a href="#">Entertainment</a>
-											</div>
-											<h2 className="entry-title">
-												<a href="details1.html">Howard Stern: 'I told Trump' I'm voting for Clinton</a>
-											</h2>
-										</div>
-									</li>
-									<li className="tr-post">
-										<div className="entry-header">
-											<div className="entry-thumbnail">
-												<a href="details1.html"><img className="img-responsive" src="images/post/10.jpg" alt="Image"/></a>
-											</div>
-										</div>
-										<div className="post-content">
-											<div className="catagory">
-												<a href="#">Business</a>
-											</div>
-											<h2 className="entry-title">
-												<a href="details1.html">Our closest relatives aren't fans of daylight saving time</a>
-											</h2>
-										</div>
-									</li>
-									<li className="tr-post">
-										<div className="entry-header">
-											<div className="entry-thumbnail">
-												<a href="details1.html"><img className="img-responsive" src="images/post/11.jpg" alt="Image"/></a>
-											</div>
-										</div>
-										<div className="post-content">
-											<div className="catagory">
-												<a href="#">Technology</a>
-											</div>
-											<h2 className="entry-title">
-												<a href="details1.html">And the most streamed Beatles song on Spotify is...</a>
-											</h2>
-										</div>
-									</li>
-									<li className="tr-post">
-										<div className="entry-header">
-											<div className="entry-thumbnail">
-												<a href="details1.html"><img className="img-responsive" src="images/post/12.jpg" alt="Image"/></a>
-											</div>
-										</div>
-										<div className="post-content">
-											<div className="catagory">
-												<a href="#">Sports</a>
-											</div>
-											<h2 className="entry-title">
-												<a href="details1.html">Our closest relatives aren't fans of daylight saving time</a>
-											</h2>
-										</div>
-									</li>
-								</ul>
-							</div>
+							<MostVisited {...this.props}/>
 
 							<div className="tr-weather tr-widget">
 								<div className="weather-top weather-bg-color">
@@ -965,3 +911,25 @@ export default class Main extends React.Component {
         )
     }
 }
+
+
+
+const mapStateToProps = (state) =>{
+    return {
+        mostVisitedPages: state.pages.get('mostVisitedPages')
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        actions: bindActionCreators({
+            loadPagesAsync,
+        }, 
+        dispatch)
+    }
+}
+
+
+Main = connect(mapStateToProps, mapDispatchToProps)(Main)
+
+export default Main;

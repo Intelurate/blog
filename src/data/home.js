@@ -50,7 +50,8 @@ module.exports = {
             theme: "Business",
             title: "Our closest relatives aren't fans of daylight saving time",
             detailsPost: "details1.html",
-            detailsTheme: "#"},
+            detailsTheme: "#"
+        },
         {
             img: "images/post/11.jpg",
             theme: "Technology",
