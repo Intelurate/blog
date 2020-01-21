@@ -35,6 +35,7 @@ import Image4 from "../../assets/images/advertise/4.jpg";
 import Image5 from '../../assets/images/advertise/5.jpg';
 
 import data from '../../data/home';
+import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
 
 class Home extends Component {
     constructor(props) {
@@ -126,6 +127,10 @@ class Home extends Component {
                                         />
                                     </div>
                                 </div>
+                            </Container>
+
+                            <Container kind="theme" title="Photo Gallery" link="/">
+                                <PhotoGallery />
                             </Container>
 
                         </div>
