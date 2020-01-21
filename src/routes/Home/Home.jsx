@@ -42,7 +42,6 @@ class Home extends Component {
 
     render() {
         let { rising } = this.state;
-        console.log(rising);
         return (
             <div>
                 <Navbar />
@@ -91,11 +90,9 @@ class Home extends Component {
                     </div>
 
                     <div className="col-sm-3 tr-sidebar tr-sticky">
-                        <div className="theiaStickySidebar">
-                            <MostVisited {...this.props} />
-                        </div>
+                        <MostVisited {...this.props} />
                     </div>
-                    
+
                 </div>
                 <ImageContainer link="#" src={Image5} alt="Image" classContainer="tr-ad ad-image text-center"/>
             </div>
@@ -109,18 +106,18 @@ const mapStateToProps = (state) =>{
     return {
         mostVisitedPages: state.pages.get('mostVisitedPages')
     }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
     return {
         actions: bindActionCreators({
             loadPagesAsync,
-        }, 
+        },
         dispatch)
     }
-}
+};
 
 
-Home = connect(mapStateToProps, mapDispatchToProps)(Home)
+Home = connect(mapStateToProps, mapDispatchToProps)(Home);
 
 export default Home;
