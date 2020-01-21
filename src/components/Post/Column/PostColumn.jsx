@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
-import Container from '../Container'
-import ImageContainer from "../ImageContainer";
-import Socials from "../Socials/Socials";
+import ImageContainer from "../../ImageContainer";
+import Socials from "../../Socials/Socials";
 
-export default class Test extends Component {
+export default class PostColumn extends Component {
     render() {
-        const { titleTheme, linkTheme, img, imgAuthor, author, share, time, detailsPost, titlePost, descriptionPost } = this.props;
+        const { img, imgAuthor, author, share, time, detailsPost, titlePost, descriptionPost, socials } = this.props;
         return (
-            <Container kind="theme" title={titleTheme} link={linkTheme}>
+            <div className="tr-post">
                 <div className="tr-post">
                     <div className="entry-header">
                         <div className="entry-thumbnail">
@@ -24,9 +23,11 @@ export default class Test extends Component {
                             <ul>
                                 <li>By <Link to="#">{author}</Link></li>
                                 <li>{share} Share /<Link to="#">{time}</Link></li>
-                                <li>
-                                    <Socials share/>
-                                </li>
+                                {socials &&
+                                    <li>
+                                        <Socials share/>
+                                    </li>
+                                }
                             </ul>
                         </div>
                         <h2 className="entry-title">
@@ -43,7 +44,7 @@ export default class Test extends Component {
                         </div>
                     </div>
                 </div>
-            </Container>
+            </div>
         )
     }
 }
