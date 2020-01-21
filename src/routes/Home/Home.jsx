@@ -28,6 +28,8 @@ import Post17 from '../../assets/images/post/17.jpg';
 import Post18 from '../../assets/images/post/18.jpg';
 import Post19 from '../../assets/images/post/19.jpg';
 import Post20 from '../../assets/images/post/20.jpg';
+import Post21 from '../../assets/images/post/21.jpg';
+import Post22 from '../../assets/images/post/22.jpg';
 import Image1 from '../../assets/images/advertise/1.jpg';
 import Image2 from "../../assets/images/advertise/2.jpg";
 import Image3 from '../../assets/images/advertise/3.jpg';
@@ -36,6 +38,8 @@ import Image5 from '../../assets/images/advertise/5.jpg';
 
 import data from '../../data/home';
 import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
+import PostSmall from "../../components/Post/Small/PostSmall";
+import LocalEvents from "../../components/LocalEvents/LocalEvents";
 
 class Home extends Component {
     constructor(props) {
@@ -101,7 +105,7 @@ class Home extends Component {
                                     descriptionPost="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat."
                                     socials
                                 />
-                                <div className="medium-PostColumn-content row">
+                                <div className="medium-post-content row">
                                     <div className="col-md-6 left-PostColumn">
                                         <PostColumn
                                             img={Post19}
@@ -140,6 +144,45 @@ class Home extends Component {
                         <div className="theiaStickySidebar">
                             <Container classContainer="tr-ad ad-before">
                                 <ImageContainer link="#" src={Image3} alt="Image" />
+                            </Container>
+
+                            <Container kind="theme" title="Technology" link="/">
+                                <PostColumn
+                                    img={Post21}
+                                    imgAuthor={Author3}
+                                    author="Jhon Dun"
+                                    share="205"
+                                    time="4 Hour ago"
+                                    detailsPost="details1.html"
+                                    titlePost="Most Stylish And Best-Dressed Women The World"
+                                    descriptionPost="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                />
+                                <ul className="small-post-list">
+                                    <PostSmall
+                                        img={Post22}
+                                        author="Matt Cloey"
+                                        title="Chelsea Handler slams Angelina yet again"
+                                    />
+                                    <PostSmall
+                                        img={Post22}
+                                        author="Kolony Wispe"
+                                        title="Scenes of the Victoria's Secret Fashion"
+                                    />
+                                    <PostSmall
+                                        img={Post22}
+                                        author="Kolony Wispe"
+                                        title="Mirum est notare quam littera gothica"
+                                    />
+                                    <PostSmall
+                                        img={Post22}
+                                        author="Janet Jackson"
+                                        title="Duis autem vel eum iriure dolor in henderit in"
+                                    />
+                                </ul>
+                            </Container>
+
+                            <Container kind="theme" title="LocalEvents" link="/" classContainer="local-events">
+                                <LocalEvents />
                             </Container>
                         </div>
                     </div>
