@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import Forecast from '../../assets/images/others/weather1.png';
-import Drop from '../../assets/images/others/weather2.png';
-import Wind from '../../assets/images/others/weather3.png';
-import Night from '../../assets/images/others/weather6.png';
-import Day from '../../assets/images/others/weather5.png';
+import Forecast from '../../../assets/images/others/weather1.png';
+import Drop from '../../../assets/images/others/weather2.png';
+import Wind from '../../../assets/images/others/weather3.png';
+import Night from '../../../assets/images/others/weather6.png';
+import Day from '../../../assets/images/others/weather5.png';
 
 export default class Weather extends Component {
     render() {

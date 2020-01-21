@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import Author4 from '../../assets/images/others/author4.png';
-import Author5 from '../../assets/images/others/author5.png';
-import Author6 from '../../assets/images/others/author6.png';
-import Author7 from '../../assets/images/others/author7.png';
-import Author8 from '../../assets/images/others/author8.png';
+import Author4 from '../../../assets/images/others/author4.png';
+import Author5 from '../../../assets/images/others/author5.png';
+import Author6 from '../../../assets/images/others/author6.png';
+import Author7 from '../../../assets/images/others/author7.png';
+import Author8 from '../../../assets/images/others/author8.png';
 
 export default class WeeklyToplist extends Component {
     render() {

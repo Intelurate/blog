@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 
-import MostVisited from '../../components/MostVisited';
+import MostVisited from '../../components/Widgets/MostVisitedWidget';
 
 import {
 	loadPagesAsync
@@ -16,9 +16,9 @@ import PostColumn from '../../components/Post/Column/PostColumn';
 import PostRow from "../../components/Post/Row/PostRow";
 import Container from "../../components/Container";
 import ImageContainer from "../../components/ImageContainer";
-import Weather from "../../components/WeatherWidget/Weather";
-import Newshub from "../../components/NewshubWidget/Newshub";
-import WeeklyToplist from "../../components/WeeklyToplistWidget/WeeklyToplist";
+import Weather from "../../components/Widgets/WeatherWidget/Weather";
+import Newshub from "../../components/Widgets/NewshubWidget/Newshub";
+import WeeklyToplist from "../../components/Widgets/WeeklyToplistWidget/WeeklyToplist";
 
 import Author1 from '../../assets/images/others/author1.png';
 import Author2 from '../../assets/images/others/author2.png';
