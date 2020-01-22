@@ -22,14 +22,8 @@ import WeeklyToplist from "../../components/Widgets/WeeklyToplistWidget/WeeklyTo
 
 import Author1 from '../../assets/images/others/author1.png';
 import Author2 from '../../assets/images/others/author2.png';
-import Author3 from '../../assets/images/others/author3.png';
 import Post16 from '../../assets/images/post/16.jpg';
 import Post17 from '../../assets/images/post/17.jpg';
-import Post18 from '../../assets/images/post/18.jpg';
-import Post19 from '../../assets/images/post/19.jpg';
-import Post20 from '../../assets/images/post/20.jpg';
-import Post21 from '../../assets/images/post/21.jpg';
-import Post22 from '../../assets/images/post/22.jpg';
 import Image1 from '../../assets/images/advertise/1.jpg';
 import Image2 from "../../assets/images/advertise/2.jpg";
 import Image3 from '../../assets/images/advertise/3.jpg';
@@ -38,9 +32,10 @@ import Image5 from '../../assets/images/advertise/5.jpg';
 
 import data from '../../data/home';
 import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
-import PostSmall from "../../components/Post/Small/PostSmall";
 import LocalEvents from "../../components/LocalEvents/LocalEvents";
 import Sport from "../../components/Sport/Sport";
+import BigPostWithList from "../../components/Post/BigPostWithList/BigPostWithList";
+import BigPostWithRow from "../../components/Post/BigPostWithRow/BigPostWithRow";
 
 class Home extends Component {
     constructor(props) {
@@ -94,45 +89,7 @@ class Home extends Component {
                                 />
                             </Container>
 
-                            <Container kind="theme" title="Business" link="/">
-                                <PostColumn
-                                    img={Post18}
-                                    imgAuthor={Author3}
-                                    author="Kolony Wispe"
-                                    share="123"
-                                    time="2 Hour ago"
-                                    detailsPost="details1.html"
-                                    titlePost="Peyton Manning deserved a better ending -- if he's telling the truth"
-                                    descriptionPost="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat."
-                                    socials
-                                />
-                                <div className="medium-post-content row">
-                                    <div className="col-md-6 left-PostColumn">
-                                        <PostColumn
-                                            img={Post19}
-                                            imgAuthor={Author1}
-                                            author="Janet Jackson"
-                                            share="10"
-                                            time="3 Hour ago"
-                                            detailsPost="details1.html"
-                                            titlePost="Duis autem vel eum iriure dolor in hendrerit"
-                                            descriptionPost="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore।"
-                                        />
-                                    </div>
-                                    <div className="col-md-6">
-                                        <PostColumn
-                                            img={Post20}
-                                            imgAuthor={Author2}
-                                            author="Kolony Wispe"
-                                            share="25"
-                                            time="7 Hour ago"
-                                            detailsPost="details1.html"
-                                            titlePost="Martha Stewart, Snoop Dogg and Anna Kendrick"
-                                            descriptionPost="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore।"
-                                        />
-                                    </div>
-                                </div>
-                            </Container>
+                            <BigPostWithRow {...this.props} />
 
                             <Container kind="theme" title="Photo Gallery" link="/">
                                 <PhotoGallery />
@@ -151,40 +108,7 @@ class Home extends Component {
                                 <ImageContainer link="#" src={Image3} alt="Image" />
                             </Container>
 
-                            <Container kind="theme" title="Technology" link="/">
-                                <PostColumn
-                                    img={Post21}
-                                    imgAuthor={Author3}
-                                    author="Jhon Dun"
-                                    share="205"
-                                    time="4 Hour ago"
-                                    detailsPost="details1.html"
-                                    titlePost="Most Stylish And Best-Dressed Women The World"
-                                    descriptionPost="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                                />
-                                <ul className="small-post-list">
-                                    <PostSmall
-                                        img={Post22}
-                                        author="Matt Cloey"
-                                        title="Chelsea Handler slams Angelina yet again"
-                                    />
-                                    <PostSmall
-                                        img={Post22}
-                                        author="Kolony Wispe"
-                                        title="Scenes of the Victoria's Secret Fashion"
-                                    />
-                                    <PostSmall
-                                        img={Post22}
-                                        author="Kolony Wispe"
-                                        title="Mirum est notare quam littera gothica"
-                                    />
-                                    <PostSmall
-                                        img={Post22}
-                                        author="Janet Jackson"
-                                        title="Duis autem vel eum iriure dolor in henderit in"
-                                    />
-                                </ul>
-                            </Container>
+                            <BigPostWithList {...this.props}/>
 
                             {/*<Container kind="theme" title="LocalEvents" link="/" classContainer="local-events">*/}
                             {/*    <LocalEvents />*/}
