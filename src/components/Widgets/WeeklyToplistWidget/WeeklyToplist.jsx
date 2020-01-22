@@ -7,6 +7,19 @@ import CommentItem from "./CommentItem/CommentItem";
 import Author4 from '../../../assets/images/others/author4.png';
 
 export default class WeeklyToplist extends Component {
+
+    topAuthors() {
+        return (
+            <AuthorItem author="Janet Jackson" imageSrc={Author4} />
+        )
+    }
+
+    topComments() {
+        return (
+            <CommentItem author="Jhon dun" title="3 students arrested after body-slamming principal" />
+        )
+    }
+
     render() {
         return (
             <div className="tr-widget meta-widget">
@@ -22,12 +35,12 @@ export default class WeeklyToplist extends Component {
                 <div className="tab-content">
                     <div role="tabpanel" className="tab-pane active fade in" id="author">
                         <ul className="authors-post">
-                            <AuthorItem author="Janet Jackson" imageSrc={Author4} />
+                            {this.topAuthors()}
                         </ul>
                     </div>
                     <div role="tabpanel" className="tab-pane fade in" id="comment">
                         <ul className="comment-list">
-                            <CommentItem author="Jhon dun" title="3 students arrested after body-slamming principal" />
+                            {this.topComments()}
                         </ul>
                     </div>
                 </div>

@@ -9,9 +9,9 @@ export default class MostVisited extends Component {
     rendeMostVisitedPages() {
 
         const { mostVisitedPages } = this.props;
-        return !mostVisitedPages || !mostVisitedPages.size ? Immutable.fromJS([]) : mostVisitedPages.map(d => {
+        return !mostVisitedPages || !mostVisitedPages.size ? Immutable.fromJS([]) : mostVisitedPages.map((d, i) => {
             return (
-                <li className="tr-post">
+                <li className="tr-post" key={i}>
                     <div className="entry-header">
                         <div className="entry-thumbnail">
                             <a href="details1.html"><img className="img-responsive" src="images/post/9.jpg" alt="Image" /></a>
