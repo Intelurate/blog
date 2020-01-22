@@ -12,12 +12,11 @@ const pageInitialState = {
                 theme: "World",
                 title: "U.S. marshal killed serving warrant at mobile",
                 bgImage: "../../assets/images/post/slider1.jpg",
-                share: "643",
-                time: "9 Hour ago",
-                description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat.",
+                share: 643,
+                time: 9,
 
                 "visited": 2322, // people who have visited page
-                "live": 5367, // people who are currently on this page. 
+                "live": 5367, // people who are currently on this page.
                 "categories": [
                     "world",
                     "sports",
@@ -33,7 +32,7 @@ const pageInitialState = {
                 description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat.",
 
                 "visited": 4344, // people who have visited page
-                "live": 5367, // peopel who are currently on this page. 
+                "live": 5367, // peopel who are currently on this page.
                 "categories": [
                     "world",
                     "sports",
@@ -48,7 +47,7 @@ function pageReducer(state = pageInitialState.page, action) {
     switch (action.type) {
 
         case LOAD_PAGE:
-            state = state.set('pages', Immutable.fromJS(action.pages));    
+            state = state.set('pages', Immutable.fromJS(action.pages));
             return state;
 
         default:

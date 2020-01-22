@@ -143,11 +143,11 @@ class Home extends Component {
 
                     <div className="col-sm-4 col-md-3 medium-PostColumn-responsive tr-sticky">
                         <div className="theiaStickySidebar">
-                            <Container kind="theme" title="Sports" link="/">
-                                <Sport />
-                            </Container>
+                            {/*<Container kind="theme" title="Sports" link="/">*/}
+                            {/*    <Sport />*/}
+                            {/*</Container>*/}
 
-                            <Container classContainer="tr-ad ad-before">
+                            <Container classContainer="tr-ad">
                                 <ImageContainer link="#" src={Image3} alt="Image" />
                             </Container>
 
@@ -186,24 +186,24 @@ class Home extends Component {
                                 </ul>
                             </Container>
 
-                            <Container kind="theme" title="LocalEvents" link="/" classContainer="local-events">
-                                <LocalEvents />
-                            </Container>
+                            {/*<Container kind="theme" title="LocalEvents" link="/" classContainer="local-events">*/}
+                            {/*    <LocalEvents />*/}
+                            {/*</Container>*/}
                         </div>
                     </div>
 
                     <div className="col-sm-3 tr-sidebar tr-sticky">
                         <div className="theiaStickySidebar">
-                            <Container classContainer="tr-ad ad-before">
+                            <Container classContainer="tr-ad">
                                 <ImageContainer link="#" src={Image2} alt="Image" />
                             </Container>
                             <MostVisited {...this.props} />
-                            <Weather />
-                            <Container classContainer="tr-ad ad-before">
+                            {/*<Weather />*/}
+                            <Container classContainer="tr-ad">
                                 <ImageContainer link="#" src={Image4} alt="Image" />
                             </Container>
                             <Newshub />
-                            <WeeklyToplist />
+                            <WeeklyToplist {...this.props}/>
                         </div>
                     </div>
 
