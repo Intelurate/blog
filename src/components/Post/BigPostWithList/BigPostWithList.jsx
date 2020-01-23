@@ -29,8 +29,7 @@ export default class BigPostWithList extends Component {
                     time="4 Hour ago"
                     detailsPost="details1.html"
                     titlePost="Most Stylish And Best-Dressed Women The World"
-                    descriptionPost="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                />
+                    />
                 <ul className="small-post-list">
                     {this.smallPosts()}
                 </ul>

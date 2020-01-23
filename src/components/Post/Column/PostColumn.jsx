@@ -6,7 +6,7 @@ import Socials from "../../Socials/Socials";
 
 export default class PostColumn extends Component {
     render() {
-        const { img, imgAuthor, author, share, time, detailsPost, titlePost, descriptionPost, socials } = this.props;
+        const { img, imgAuthor, author, share, time, detailsPost, titlePost, socials } = this.props;
         return (
             <div className="tr-post">
                 <div className="tr-post">
@@ -33,7 +33,6 @@ export default class PostColumn extends Component {
                         <h2 className="entry-title">
                             <Link to={detailsPost}>{titlePost}</Link>
                         </h2>
-                        <p>{descriptionPost}</p>
                         <div className="read-more">
                             <div className="continue-reading pull-left">
                                 <Link to="#">Continue Reading <i className="fa fa-angle-right"></i></Link>

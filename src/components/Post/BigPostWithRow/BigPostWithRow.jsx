@@ -20,7 +20,6 @@ export default class BigPostWithRow extends Component {
                     time="2 Hour ago"
                     detailsPost="details1.html"
                     titlePost="Peyton Manning deserved a better ending -- if he's telling the truth"
-                    descriptionPost="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat."
                     socials
                 />
                 <div className="medium-post-content row">
@@ -33,7 +32,6 @@ export default class BigPostWithRow extends Component {
                             time="3 Hour ago"
                             detailsPost="details1.html"
                             titlePost="Duis autem vel eum iriure dolor in hendrerit"
-                            descriptionPost="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore।"
                         />
                     </div>
                     <div className="col-md-6">
@@ -45,7 +43,6 @@ export default class BigPostWithRow extends Component {
                             time="7 Hour ago"
                             detailsPost="details1.html"
                             titlePost="Martha Stewart, Snoop Dogg and Anna Kendrick"
-                            descriptionPost="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore।"
                         />
                     </div>
                 </div>

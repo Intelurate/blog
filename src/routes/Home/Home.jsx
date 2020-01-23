@@ -66,8 +66,6 @@ class Home extends Component {
                                     time="1 Hour ago"
                                     detailsPost="details1.html"
                                     titlePost="Slow TV finds life online with Facebook Live and Periscope"
-                                    descriptionPost="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat."
                                     socials
                                 />
                             </Container>
@@ -85,15 +83,14 @@ class Home extends Component {
                                     time="9 Hour ago"
                                     detailsPost="details1.html"
                                     titlePost="We Are Seeing The Effects Of The Minimum Wage Rise In San Francisco"
-                                    descriptionPost="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
                                 />
                             </Container>
 
                             <BigPostWithRow {...this.props} />
 
-                            <Container kind="theme" title="Photo Gallery" link="/">
-                                <PhotoGallery />
-                            </Container>
+                            {/*<Container kind="theme" title="Photo Gallery" link="/">*/}
+                            {/*    <PhotoGallery />*/}
+                            {/*</Container>*/}
 
                         </div>
                     </div>

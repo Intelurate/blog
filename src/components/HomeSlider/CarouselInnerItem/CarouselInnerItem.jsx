@@ -23,7 +23,6 @@ export default class CarouselInnerItem extends Component {
                                 <li>{share} Share /<Link to="#">{time}</Link></li>
                             </ul>
                         </div>
-                        <p data-animation="animated fadeInUp">{description}</p>
                         <div className={cx("read-more")} data-animation="animated fadeInUp">
                             <div className={cx("continue-reading pull-left")}>
                                 <Link to="#">Continue Reading <i className={cx("fa fa-angle-right")}></i></Link>

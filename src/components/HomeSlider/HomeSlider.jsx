@@ -39,7 +39,6 @@ export default class HomeSlider extends Component {
                                 author={item.author}
                                 share={item.share}
                                 time={item.time}
-                                description={item.description}
                                 key={index}
                             />
                         )}
