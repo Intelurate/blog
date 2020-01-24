@@ -16,7 +16,6 @@ import PostColumn from '../../components/Post/Column/PostColumn';
 import PostRow from "../../components/Post/Row/PostRow";
 import Container from "../../components/Container";
 import ImageContainer from "../../components/ImageContainer";
-import Weather from "../../components/Widgets/WeatherWidget/Weather";
 import Newshub from "../../components/Widgets/NewshubWidget/Newshub";
 import TopCommenters from "../../components/Widgets/TopCommentersWidget/TopCommenters";
 
@@ -30,8 +29,6 @@ import Image3 from '../../assets/images/advertise/3.jpg';
 import Image4 from "../../assets/images/advertise/4.jpg";
 import Image5 from '../../assets/images/advertise/5.jpg';
 
-import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
-import LocalEvents from "../../components/LocalEvents/LocalEvents";
 import Sport from "../../components/Sport/Sport";
 import BigPostWithList from "../../components/Post/BigPostWithList/BigPostWithList";
 import BigPostWithRow from "../../components/Post/BigPostWithRow/BigPostWithRow";
@@ -74,10 +71,6 @@ class Home extends Component {
 
                             <BigPostWithRow {...this.props} />
 
-                            {/*<Container kind="theme" title="Photo Gallery" link="/">*/}
-                            {/*    <PhotoGallery />*/}
-                            {/*</Container>*/}
-
                         </div>
                     </div>
 
@@ -93,9 +86,6 @@ class Home extends Component {
 
                             <BigPostWithList {...this.props}/>
 
-                            {/*<Container kind="theme" title="LocalEvents" link="/" classContainer="local-events">*/}
-                            {/*    <LocalEvents />*/}
-                            {/*</Container>*/}
                         </div>
                     </div>
 
@@ -105,7 +95,6 @@ class Home extends Component {
                                 <ImageContainer link="#" src={Image2} alt="Image" />
                             </Container>
                             <MostVisited {...this.props} />
-                            {/*<Weather />*/}
                             <Container classContainer="tr-ad">
                                 <ImageContainer link="#" src={Image4} alt="Image" />
                             </Container>
