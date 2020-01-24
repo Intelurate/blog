@@ -29,18 +29,11 @@ export default class WeeklyToplist extends Component {
                 <ul className="nav nav-tabs" role="tablist">
                     <li role="presentation" className="active"><Link to="#author" data-toggle="tab"><i
                         className="fa fa-user"></i>Authors</Link></li>
-                    <li role="presentation"><Link to="#comment" data-toggle="tab"><i className="fa fa-comment-o"></i>Comments</Link>
-                    </li>
                 </ul>
                 <div className="tab-content">
                     <div role="tabpanel" className="tab-pane active fade in" id="author">
                         <ul className="authors-post">
                             {this.topAuthors()}
-                        </ul>
-                    </div>
-                    <div role="tabpanel" className="tab-pane fade in" id="comment">
-                        <ul className="comment-list">
-                            {this.topComments()}
                         </ul>
                     </div>
                 </div>

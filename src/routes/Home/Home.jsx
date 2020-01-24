@@ -123,7 +123,7 @@ class Home extends Component {
                             <Container classContainer="tr-ad">
                                 <ImageContainer link="#" src={Image4} alt="Image" />
                             </Container>
-                            <Newshub />
+                            {/*<Newshub />*/}
                             <WeeklyToplist {...this.props}/>
                         </div>
                     </div>
