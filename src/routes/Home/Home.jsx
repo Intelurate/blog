@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-
-import MostVisited from '../../components/Widgets/MostVisitedWidget';
-
 import {
 	loadPagesAsync
 } from '../../actions/pageActions';
@@ -15,9 +12,13 @@ import HomeSlider from '../../components/HomeSlider/HomeSlider';
 import PostColumn from '../../components/Post/Column/PostColumn';
 import PostRow from "../../components/Post/Row/PostRow";
 import Container from "../../components/Container";
-import ImageContainer from "../../components/ImageContainer";
-import Newshub from "../../components/Widgets/NewshubWidget/Newshub";
+import BigPostWithList from "../../components/Post/BigPostWithList/BigPostWithList";
+import BigPostWithRow from "../../components/Post/BigPostWithRow/BigPostWithRow";
 import TopCommenters from "../../components/Widgets/TopCommentersWidget/TopCommenters";
+import ImageContainer from "../../components/ImageContainer";
+import MostVisited from '../../components/Widgets/MostVisitedWidget';
+import Newshub from "../../components/Widgets/NewshubWidget/Newshub";
+import Sport from "../../components/Sport/Sport";
 
 import Author1 from '../../assets/images/others/author1.png';
 import Author2 from '../../assets/images/others/author2.png';
@@ -28,10 +29,6 @@ import Image2 from "../../assets/images/advertise/2.jpg";
 import Image3 from '../../assets/images/advertise/3.jpg';
 import Image4 from "../../assets/images/advertise/4.jpg";
 import Image5 from '../../assets/images/advertise/5.jpg';
-
-import Sport from "../../components/Sport/Sport";
-import BigPostWithList from "../../components/Post/BigPostWithList/BigPostWithList";
-import BigPostWithRow from "../../components/Post/BigPostWithRow/BigPostWithRow";
 
 class Home extends Component {
     render() {
