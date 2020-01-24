@@ -25,7 +25,7 @@ export default class CarouselInnerItem extends Component {
                         </div>
                         <div className={cx("read-more")} data-animation="animated fadeInUp">
                             <div className={cx("continue-reading pull-left")}>
-                                <Link to="#">Continue Reading <i className={cx("fa fa-angle-right")}></i></Link>
+                                <Link to="#">Visit this website<i className={cx("fa fa-angle-right")}></i></Link>
                             </div>
                             <div className={cx("feed pull-right")}>
                                 <ul>

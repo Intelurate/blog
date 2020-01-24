@@ -35,7 +35,7 @@ export default class PostColumn extends Component {
                         </h2>
                         <div className="read-more">
                             <div className="continue-reading pull-left">
-                                <Link to="#">Continue Reading <i className="fa fa-angle-right"></i></Link>
+                                <Link to="#">Visit this website<i className="fa fa-angle-right"></i></Link>
                             </div>
                             <div className="feed pull-right">
                                 <Socials />
