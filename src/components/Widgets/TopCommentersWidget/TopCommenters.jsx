@@ -25,7 +25,7 @@ export default class TopCommenters extends Component {
                 </div>
                 <ul className="nav nav-tabs" role="tablist">
                     <li role="presentation" className="active"><Link to="#author" data-toggle="tab"><i
-                        className="fa fa-user"></i>Authors</Link></li>
+                        className="fa fa-user"></i>Commenters</Link></li>
                 </ul>
                 <div className="tab-content">
                     <div role="tabpanel" className="tab-pane active fade in" id="author">
