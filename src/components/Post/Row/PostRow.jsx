@@ -6,7 +6,7 @@ import Socials from "../../Socials/Socials";
 
 export default class PostRow extends Component {
     render() {
-        const { link, title, img, imgAuthor, author, share, time, detailsPost, titlePost, descriptionPost, socials } = this.props;
+        const { link, title, img, imgAuthor, share, time, detailsPost, titlePost, descriptionPost, socials } = this.props;
         return (
             <div className="tr-post  post-vertical">
                 <div className="section-title title-before">
@@ -28,7 +28,6 @@ export default class PostRow extends Component {
                                 </div>
                                 <div className="entry-meta">
                                     <ul>
-                                        <li>By <Link to="#">{author}</Link></li>
                                         <li>{share} Share /<Link to="#">{time}</Link></li>
                                         {socials &&
                                             <li>

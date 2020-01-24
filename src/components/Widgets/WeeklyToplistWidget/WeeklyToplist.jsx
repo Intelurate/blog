@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import AuthorItem from "./AuthorItem/AuthorItem";
-import CommentItem from "./CommentItem/CommentItem";
-
 import Author4 from '../../../assets/images/others/author4.png';
 
 export default class WeeklyToplist extends Component {
@@ -11,12 +9,6 @@ export default class WeeklyToplist extends Component {
     topAuthors() {
         return (
             <AuthorItem author="Janet Jackson" imageSrc={Author4} />
-        )
-    }
-
-    topComments() {
-        return (
-            <CommentItem author="Jhon dun" title="3 students arrested after body-slamming principal" />
         )
     }
 

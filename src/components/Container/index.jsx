@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 export default class Container extends Component {
     render() {
-        const { theme, kind, title, link, classContainer, children } = this.props;
+        const { kind, title, link, classContainer, children } = this.props;
         return (
             <div className={cx("tr-section", classContainer)}>
                 {kind === "widget" ?

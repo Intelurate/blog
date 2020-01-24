@@ -15,7 +15,6 @@ export default class BigPostWithRow extends Component {
                 <PostColumn
                     img={Post18}
                     imgAuthor={Author3}
-                    author="Kolony Wispe"
                     share="123"
                     time="2 Hour ago"
                     detailsPost="details1.html"
@@ -27,7 +26,6 @@ export default class BigPostWithRow extends Component {
                         <PostColumn
                             img={Post19}
                             imgAuthor={Author1}
-                            author="Janet Jackson"
                             share="10"
                             time="3 Hour ago"
                             detailsPost="details1.html"
@@ -38,7 +36,6 @@ export default class BigPostWithRow extends Component {
                         <PostColumn
                             img={Post20}
                             imgAuthor={Author2}
-                            author="Kolony Wispe"
                             share="25"
                             time="7 Hour ago"
                             detailsPost="details1.html"

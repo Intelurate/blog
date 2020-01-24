@@ -61,7 +61,6 @@ class Home extends Component {
                                 <PostColumn
                                     img={Post16}
                                     imgAuthor={Author1}
-                                    author="Kolony Wispe"
                                     share="445"
                                     time="1 Hour ago"
                                     detailsPost="details1.html"
@@ -78,7 +77,6 @@ class Home extends Component {
                                     title="Technology"
                                     img={Post17}
                                     imgAuthor={Author2}
-                                    author="Jhon Dun"
                                     share="255"
                                     time="9 Hour ago"
                                     detailsPost="details1.html"

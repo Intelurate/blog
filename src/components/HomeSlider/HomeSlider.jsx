@@ -36,7 +36,6 @@ export default class HomeSlider extends Component {
                                 bgImage={item.bgImage}
                                 theme={item.theme}
                                 title={item.title}
-                                author={item.author}
                                 share={item.share}
                                 time={item.time}
                                 key={index}

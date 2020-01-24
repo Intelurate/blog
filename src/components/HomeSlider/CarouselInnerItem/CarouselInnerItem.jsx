@@ -4,7 +4,7 @@ import cx from "classnames";
 
 export default class CarouselInnerItem extends Component {
     render() {
-        let { active, bgImage, theme, title, author, time, share, description } = this.props;
+        let { active, bgImage, theme, title, time, share } = this.props;
         return (
             <div className={cx("item", active && "active")}>
                 <div className={cx("item-content")}>
@@ -19,7 +19,6 @@ export default class CarouselInnerItem extends Component {
                         </h2>
                         <div className={cx("entry-meta")} data-animation="animated fadeInDwn">
                             <ul>
-                                <li>By <Link to="#">{author}</Link></li>
                                 <li>{share} Share /<Link to="#">{time}</Link></li>
                             </ul>
                         </div>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default class PostSmall extends Component {
     render() {
-        const { img, author, title } = this.props;
+        const { img, title } = this.props;
         return (
             <li>
                 <div className="entry-header">
@@ -12,11 +12,6 @@ export default class PostSmall extends Component {
                     </div>
                 </div>
                 <div className="post-content media-body">
-                    <div className="entry-meta">
-                        <ul>
-                            <li>By <Link to="#">{author}</Link></li>
-                        </ul>
-                    </div>
                     <h2 className="entry-title">
                         <Link to="details1.html">{title}</Link>
                     </h2>

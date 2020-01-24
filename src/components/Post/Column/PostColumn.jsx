@@ -6,7 +6,7 @@ import Socials from "../../Socials/Socials";
 
 export default class PostColumn extends Component {
     render() {
-        const { img, imgAuthor, author, share, time, detailsPost, titlePost, socials } = this.props;
+        const { img, imgAuthor, share, time, detailsPost, titlePost, socials } = this.props;
         return (
             <div className="tr-post">
                 <div className="tr-post">
@@ -21,7 +21,6 @@ export default class PostColumn extends Component {
                         </div>
                         <div className="entry-meta">
                             <ul>
-                                <li>By <Link to="#">{author}</Link></li>
                                 <li>{share} Share /<Link to="#">{time}</Link></li>
                                 {socials &&
                                     <li>

@@ -12,7 +12,6 @@ export default class BigPostWithList extends Component {
         return (
             <PostSmall
                 img={Post22}
-                author="Matt Cloey"
                 title="Chelsea Handler slams Angelina yet again"
             />
         )
@@ -24,7 +23,6 @@ export default class BigPostWithList extends Component {
                 <PostColumn
                     img={Post21}
                     imgAuthor={Author3}
-                    author="Jhon Dun"
                     share="205"
                     time="4 Hour ago"
                     detailsPost="details1.html"
