@@ -2,20 +2,21 @@ import axios from "axios";
 
 export const LOAD_PAGE = 'LOAD_PAGE';
 
-export function loadPages(pages){
+export function loadPages(pages, users){
     return {
         type: LOAD_PAGE,
-        pages
+        pages,
+        users
     }
 }
 
 
-// async example. 
+// async example.
 export function loadPagesAsync(username, password, socket){
     return async (dispatch) => {
-        try{        
+        try{
             const url = `http://api.wwc.com/api/pages`;
-            const response = await axios.get(url);                    
+            const response = await axios.get(url);
             dispatch(loadPages(response.data));
         }
         catch(err){

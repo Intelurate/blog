@@ -18,7 +18,7 @@ import Container from "../../components/Container";
 import ImageContainer from "../../components/ImageContainer";
 import Weather from "../../components/Widgets/WeatherWidget/Weather";
 import Newshub from "../../components/Widgets/NewshubWidget/Newshub";
-import WeeklyToplist from "../../components/Widgets/WeeklyToplistWidget/WeeklyToplist";
+import TopCommenters from "../../components/Widgets/TopCommentersWidget/TopCommenters";
 
 import Author1 from '../../assets/images/others/author1.png';
 import Author2 from '../../assets/images/others/author2.png';
@@ -30,7 +30,6 @@ import Image3 from '../../assets/images/advertise/3.jpg';
 import Image4 from "../../assets/images/advertise/4.jpg";
 import Image5 from '../../assets/images/advertise/5.jpg';
 
-import data from '../../data/home';
 import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
 import LocalEvents from "../../components/LocalEvents/LocalEvents";
 import Sport from "../../components/Sport/Sport";
@@ -38,17 +37,6 @@ import BigPostWithList from "../../components/Post/BigPostWithList/BigPostWithLi
 import BigPostWithRow from "../../components/Post/BigPostWithRow/BigPostWithRow";
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            rising: null
-        };
-    }
-
-    componentDidMount() {
-        this.setState({rising: data.rising});
-    }
-
     render() {
         return (
             <div>
@@ -122,7 +110,7 @@ class Home extends Component {
                                 <ImageContainer link="#" src={Image4} alt="Image" />
                             </Container>
                             {/*<Newshub />*/}
-                            <WeeklyToplist {...this.props}/>
+                            <TopCommenters {...this.props}/>
                         </div>
                     </div>
 
@@ -137,7 +125,8 @@ class Home extends Component {
 
 const mapStateToProps = (state) =>{
     return {
-        mostVisitedPages: state.pages.get('mostVisitedPages')
+        mostVisitedPages: state.pages.get('mostVisitedPages'),
+        topUsers: state.users.get('topUsers')
     }
 };
 
